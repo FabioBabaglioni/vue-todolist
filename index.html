@@ -32,9 +32,9 @@
                         <button class="btn btn-outline-secondary" type="button" id="button-addon2">Aggiungi</button>
                       </div>
 
-                      <div class="container_small py-4">
-                            <div class="d-flex center task justify-content-between mt-3">
-                                <span class="ps-2">Fare la spesa</span>
+                      <div class="container_small py-4" >
+                            <div class="d-flex center task justify-content-between mt-3" v-for="(task, index) in tasks">
+                                <span class="ps-2">{{task.text}}</span>
                                 <a href="" class="pe-2"><i class="fa-solid fa-trash"></i></a>
                           </div>
                       </div>
