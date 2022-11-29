@@ -26,15 +26,17 @@
       }
     },
     methods : {
-        
+    
         // aggiunta del nuovo oggetto (oush)
         addTask(){
             this.tasks.push(
                 {
                     text : this.newTask,
-                    done: 
                 }
             )
+
+            // cancello l'input dell'utente al click
+            this.newTask = ""
         },
     }
   }).mount('#app')
