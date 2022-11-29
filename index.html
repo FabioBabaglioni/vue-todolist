@@ -34,7 +34,7 @@
                         <input type="text" class="form-control" placeholder="Inserisci la tua nuova task" v-model="newTask">
 
                         <!-- andiamo a creare la funzione richiamando il metodo click -->
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon2" @click="addTask">Aggiungi</button>
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2" @KeyUp.enter="addTask" @click="addTask">Aggiungi</button>
 
                     </div>
 
@@ -46,12 +46,16 @@
                     <div class="container_small py-4" >
 
                         <!-- creiamo il ciclo for per ciclare nell'array di oggetti -->
-                            <div class="d-flex center task justify-content-between mt-3 align-items-center" v-for="(task, index) in tasks">
+                            <div class="d-flex center task justify-content-between mt-3 align-items-center" v-for="(task, index) in tasks" v-if= "tasks.length > 0">
 
                                 <!-- andiamo a richiamare il testo dell'oggetto -->
                                 <span class="ps-2">{{task.text}}</span>
                                 <i class="fa-solid fa-trash pe-2" @click="cancel(index)"></i>
+
                           </div>
+
+                          <h3 v-else>Non ci sono task da visualizzare</h3>
+
                     </div>
                     
                 </section>
