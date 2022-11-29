@@ -46,11 +46,11 @@
                     <div class="container_small py-4" >
 
                         <!-- creiamo il ciclo for per ciclare nell'array di oggetti -->
-                            <div class="d-flex center task justify-content-between mt-3" v-for="(task, index) in tasks">
+                            <div class="d-flex center task justify-content-between mt-3 align-items-center" v-for="(task, index) in tasks">
 
                                 <!-- andiamo a richiamare il testo dell'oggetto -->
                                 <span class="ps-2">{{task.text}}</span>
-                                <a href="" class="pe-2"><i class="fa-solid fa-trash"></i></a>
+                                <i class="fa-solid fa-trash pe-2" @click="delete(index)"></i>
                           </div>
                     </div>
                     

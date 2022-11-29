@@ -38,14 +38,19 @@
                     text : this.newTask,
                 }
             )
+
+            // tiportiamo l'errore a false per togliere la scritta error
             this.error = false
         }
 
             // cancello l'input dell'utente al click
             this.newTask = ""
 
-            // tiportiamo l'errore a false per togliere la scritta error
             
+        },
+
+        delete(index){
+            this.tasks.splice(index, 0)
         },
     }
   }).mount('#app')
