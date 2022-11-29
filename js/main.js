@@ -5,7 +5,7 @@
     data() {
       return {
         message: 'Hello Vue!',
-
+        error : false,
         tasks: [
             { 
                 text: 'Fare i compiti', 
@@ -29,11 +29,16 @@
     
         // aggiunta del nuovo oggetto (oush)
         addTask(){
-            this.tasks.push(
+
+        if(this.newTask.length < 5 || this.newTask === ""){
+            error = true
+        }else{
+            this.tasks.unshift(
                 {
                     text : this.newTask,
                 }
             )
+        }
 
             // cancello l'input dell'utente al click
             this.newTask = ""
