@@ -27,13 +27,19 @@
             <main>
                 
                 <section>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Inserisci la tua task" >
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Aggiungi</button>
+                    <!-- input group preso da bootstrap -->
+                    <div class="input-group mb-3 newTask">
+                        <!-- con il v-model andiamo a leggere ciò che l'utente inserisce -->
+                        <input type="text" class="form-control" placeholder="Inserisci la tua nuova task" v-model="newTask">
+                        <!-- andiamo a creare la funzione richiamando il metodo click -->
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2" @click="addTask">Aggiungi</button>
                       </div>
 
                       <div class="container_small py-4" >
+                        <!-- creiamo il ciclo for per ciclare nell'array di oggetti -->
                             <div class="d-flex center task justify-content-between mt-3" v-for="(task, index) in tasks">
+
+                                <!-- andiamo a richiamare il testo dell'oggetto -->
                                 <span class="ps-2">{{task.text}}</span>
                                 <a href="" class="pe-2"><i class="fa-solid fa-trash"></i></a>
                           </div>

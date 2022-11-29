@@ -16,7 +16,7 @@
                 text: 'Fare la spesa', 
                 done: true 
              }, 
-             
+
             { 
                 text: 'Fare il bucato', 
                 done: false 
@@ -24,6 +24,18 @@
             ]
 
       }
+    },
+    methods : {
+        
+        // aggiunta del nuovo oggetto (oush)
+        addTask(){
+            this.tasks.push(
+                {
+                    text : this.newTask,
+                    done: 
+                }
+            )
+        },
     }
   }).mount('#app')
 
