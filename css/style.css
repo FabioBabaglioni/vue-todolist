@@ -1,0 +1,26 @@
+*{
+    font-family: 'Prompt', sans-serif;
+}
+
+
+.center{
+    width: 50%;
+    height: ;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.task{
+    border: solid 1px black;
+    border-radius: 30px;
+    background-color: white;
+}
+
+.fa-trash{
+    color: red;
+}
+
+.container_small{
+    background-color: lightgray;
+    border-radius: 40px;
+}
